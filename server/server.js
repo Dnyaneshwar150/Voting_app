@@ -1,61 +1,52 @@
-import express from 'express'
-import dotenv from 'dotenv'
-import bodyParser from 'body-parser'
-import colors from 'colors'
-import cors from 'cors'
-import mongoose from 'mongoose'
-// const mongoose = require('mongoose');
+// Import required packages
+import express from 'express';
+import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
+import colors from 'colors';
+import cors from 'cors';
+import mongoose from 'mongoose';
+import userRouter from './routes/User.routes.js';
+import candidateRouter from './routes/Candidate.routes.js';
 
+// Create express app
+const app = express();
 
-// import connectDB from './db/index.js'
-import userRouter from './routes/User.routes.js'
-import candidateRouter from './routes/Candidate.routes.js'
+// Load environment variables from .env file
+dotenv.config();
 
+// Define port
+const port = process.env.PORT || 8080;
 
-
-const app = express()
-dotenv.config()
-const port = process.env.PORT || 8080
-
-
+// Connect to MongoDB
 const mongoURL = process.env.MONGO_URI;
-
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
-
 const db = mongoose.connection;
-
 db.on('connected', () => {
     console.log('Connected to MongoDB server');
 });
-
 db.on('error', (err) => {
     console.error('MongoDB connection error:', err);
 });
-
 db.on('disconnected', () => {
     console.log('MongoDB disconnected');
 });
 
+// Middleware
+app.use(cors());
+  app.use(express.json());
+app.use(bodyParser.json());
 
-//Middlewares
-app.use(cors(
-    {
-   origin: ["https://deploy-mern-1whq.vercel.app"],
-   methods:["POST","GET","PUT","DELETE"],
-   credentails:true 
-}
-));
-app.use(express.json())
-app.use(bodyParser.json())
+// Routes
+app.use('/api/v1/users', userRouter);
+app.use('/api/v1/candidate', candidateRouter);
 
-//Routes
+// Handle preflight requests
+app.options('*', cors());
 
-app.use('/api/v1/users',userRouter)
-app.use('/api/v1/candidate',candidateRouter)
-
-app.listen(port,() => {
-      console.log(`App running on port: ${port}`.bgCyan.white);
-})
+// Start server
+app.listen(port, () => {
+    console.log(`App running on port: ${port}`.bgCyan.white);
+});
