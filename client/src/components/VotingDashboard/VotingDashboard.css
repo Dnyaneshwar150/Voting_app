@@ -1,0 +1,52 @@
+.voting-dashboard{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+}
+
+.candidate-section{
+      background-color: rgba(127, 221, 255, 0.093);
+      box-shadow: rgba(0,0,0,0.4) 0px 2px 4px, rgba(0,0,0,0.3) 0px 7px 13px -3px, rgba(0,0,0,0.2) 0px -3px 0px inset;
+      margin: 50px;
+      padding: 60px;
+      height: 300px;
+      width: 600;
+}
+.candidate-title{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 50px;
+      width: 100%;
+      padding: 20px 0px;
+      color: #454545;
+      font-size: 20px;
+      font-weight: 600;
+}
+
+@media(max-width:800px){
+      .voting-dashboard{
+            display: flex;
+            flex-direction: column;
+      }
+      .candidate-section{
+            margin: 50px;
+            padding: 60px;
+            height: 300px;
+            width: 600px;
+      }
+      
+}
+@media(max-width:500px){
+      .voting-dashboard{
+           width: 400px;
+      }
+      .candidate-section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            padding-left: 60px;
+      }
+      
+}

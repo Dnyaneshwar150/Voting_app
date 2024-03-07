@@ -1,0 +1,77 @@
+.result{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.result-left{
+      display: flex;
+      flex-direction: column;
+}
+
+.list-candidate{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 600px;
+      height: 400px;
+      padding: 10px 50px;
+      margin: 60px;
+      border-radius: 6px;
+      background: white;
+      background-color: rgba(127, 221, 255, 0.093);
+      box-shadow: rgba(0,0,0,0.4) 0px 2px 4px, rgba(0,0,0,0.3) 0px 7px 13px -3px, rgba(0,0,0,0.2) 0px -3px 0px inset;
+}
+.listcandidate-format-main{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      width: 600px;
+      padding: 20px 0;
+      color: #454545;
+      font-size: 15px;
+      font-weight: 600;
+}
+.listcandidate-format{
+      align-items: center;
+      font-weight: 500;
+}
+
+.listcandidate-candidates{
+      overflow-y: auto;
+}
+
+@media(max-width:800px){
+      .list-candidate{
+            box-sizing: border-box;
+            width: 500px;
+            height: 400px;
+            padding: 10px 30px;
+            margin: 20px auto;
+      }
+      .listcandidate-format-main{
+            padding: 15px 0px;
+            color: #454545;
+            font-size: 12px;
+            width: 400px;
+      }
+      .listcandidate-product-icon{
+            height: 60px;
+      }
+}
+@media(max-width:500px){
+      .list-candidate{
+            width: 600px;
+            margin-left: 60px;
+      }
+      .listcandidate-format-main{
+            padding: 15px 0px;
+            color: #454545;
+            font-size: 12px;
+            width: 400px;
+      }
+      .listcandidate-product-icon{
+            height: 60px;
+      }
+}

@@ -1,0 +1,27 @@
+.footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(229, 95, 28, 0.713);
+      margin-top: 80px;
+      height: 100px;
+}
+.footer-content{
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      color: white;
+}
+
+@media(max-width:374px){
+      .footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 450px;
+      }
+      .footer-content{
+            font-size: 15px;
+            
+      }
+}

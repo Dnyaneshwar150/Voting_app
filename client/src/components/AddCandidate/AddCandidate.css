@@ -1,0 +1,56 @@
+.add-candidate{
+      background: #f1f7fc;
+      padding: 80px 0;
+}
+.addcandidate-fields{
+      display: table;
+      max-width: 600px;
+      width: 90%;
+      margin: 0 auto;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.addcandidate-fields .form{
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      background-color: #ffffff;
+      padding: 40px 60px;
+      color: #505e6c;
+}
+.addcandidate-fields .form h2{
+      font-size: 24px;
+      line-height: 1.5rem;
+      margin-bottom: 30px;
+}
+.addcandidate-fields .form .form-control{
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #dfe7f1;
+      border-radius: 0;
+      box-shadow: none;
+      outline: none;
+      color: inherit;
+      text-indent: 0px;
+      height: 40px;
+      width: 600px;
+      font-size: 15px;
+}
+.addcandidate-fields .form .btn{
+      background: rgba(253, 85, 13, 0.875);
+      border: none;
+      border-radius: 4px;
+      padding: 11px;
+      box-shadow: none;
+      margin-top: 35px;
+      text-shadow: none;
+      outline: none !important;
+      cursor: pointer;
+      width: 300px;
+      margin-left: 40px;
+      margin-bottom: 40px;
+      font-size: 15px;
+}
+.register .form .btn:active{
+      transform: translateY(1px);
+}

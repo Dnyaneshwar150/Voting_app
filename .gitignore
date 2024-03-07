@@ -1,0 +1,9 @@
+
+/node_modules
+/server/node_modules
+/server/.env
+/server/.git
+
+/client/node_modules
+/client/dist
+/client/src/service.js

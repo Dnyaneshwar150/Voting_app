@@ -1,0 +1,92 @@
+.admin-dashboard{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.admindashboard-left{
+      display: flex;
+      flex-direction: column;
+}
+.admindashboard-left img{
+      height: 300px;
+      width: 300px;
+      margin-bottom: 40px;
+}
+.admindashboard-left button{
+     height: 50px;
+     width: 90px;
+     border: 1px solid white;
+     border-radius: 5px;
+     cursor: pointer;
+     margin-left: 95px;
+     transition: 0.3s;
+     font-size: 17px;
+}
+.admindashboard-left button:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.list-candidate{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 600px;
+      height: 400px;
+      padding: 10px 50px;
+      margin: 60px;
+      border-radius: 6px;
+      background: white;
+      background-color: rgba(127, 221, 255, 0.093);
+      box-shadow: rgba(0,0,0,0.4) 0px 2px 4px, rgba(0,0,0,0.3) 0px 7px 13px -3px, rgba(0,0,0,0.2) 0px -3px 0px inset;
+}
+.listcandidate-format-main{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      width: 600px;
+      padding: 20px 0;
+      color: #454545;
+      font-size: 15px;
+      font-weight: 600;
+}
+.listcandidate-format{
+      align-items: center;
+      font-weight: 500;
+}
+
+.listcandidate-candidates{
+      overflow-y: auto;
+}
+
+@media(max-width:800px){
+      .admin-dashboard{
+            display: flex;
+            flex-direction: column;
+      }
+      .admindashboard-left img{
+            height: 200px;
+            width: 200px;
+            margin-bottom: 40px;
+      }
+      .admindashboard-left button{
+            margin-left: 55px;
+           
+       }
+      .list-candidate{
+            box-sizing: border-box;
+            width: 500px;
+            height: 400px;
+            padding: 10px 30px;
+            margin: 20px auto;
+      }
+      .listcandidate-format-main{
+            padding: 15px 0px;
+            color: #454545;
+            font-size: 12px;
+            width: 400px;
+      }
+      .listcandidate-product-icon{
+            height: 60px;
+      }
+}
