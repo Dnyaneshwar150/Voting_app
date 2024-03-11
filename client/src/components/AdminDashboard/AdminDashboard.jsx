@@ -60,7 +60,7 @@ const AdminDashboard = () => {
             <p>{candidate.name}</p>
             <p>{candidate.age}</p>
             <p>{candidate.party}</p>
-            <button onClick={() => { removeCandidate(candidate._id) }}>Delete</button>
+            <button className='deleteButton' onClick={() => { removeCandidate(candidate._id) }}>Delete</button>
           </div>
             <hr />
           </>

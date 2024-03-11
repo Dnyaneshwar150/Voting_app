@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../store/auth'
 import { BASE_URL } from '../../service'
 import { toast } from 'react-toastify'
+// import register_Image from '../../assets/register_vote_image.png';
 
 const Registration = () => {
       const navigate = useNavigate()
@@ -47,7 +48,7 @@ const Registration = () => {
                   <div className="register-container">
                         <div className="image-holder"></div>
                         <div className='form'>
-                              <h2><strong>Register</strong></h2>
+                              <h2><strong>Register for Vote</strong></h2>
                               <input className='form-control' name='name' value={formData.name} onChange={changeHandler} type="text" placeholder=' Enter Your Name' />
                               <input className='form-control' name='email' value={formData.email} onChange={changeHandler} type="email" placeholder='Email Address' />
                               <input className='form-control' name='password' value={formData.password} onChange={changeHandler} type="password" placeholder='Password' />
@@ -65,4 +66,3 @@ const Registration = () => {
 }
 
 export default Registration
-

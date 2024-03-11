@@ -1,38 +1,53 @@
-.login{
+/* login.css */
+
+.login {
       background: #f1f7fc;
       padding: 80px 0;
-}
-.login .login-container{
+      margin-top: 50px;
+    }
+    
+    .login .login-container {
       display: table;
       max-width: 900px;
       width: 90%;
       margin: 0 auto;
-      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-}
-.login .image-holder{
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login .image-holder {
       display: table-cell;
       width: auto;
-      background: url(../../assets/login.avif);
+      background: url(../../assets/89242371_1556938424459497_7548775034152550400_n.png);
       background-size: cover;
-}
-.login .form{
+    }
+    
+    .login .form {
       display: table-cell;
       width: 400px;
       background-color: #ffffff;
       padding: 40px 60px;
       color: #505e6c;
-}
-@media (max-width:991px){
-      .login form{
-            padding: 40px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+      transition: box-shadow 0.3s; /* Add transition */
+    }
+    
+    .login .form:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    }
+    
+    @media (max-width: 991px) {
+      .login .form {
+        padding: 40px;
       }
-}
-.login .form h2{
+    }
+    
+    .login .form h2 {
       font-size: 24px;
       line-height: 1.5rem;
       margin-bottom: 30px;
-}
-.login .form .form-control{
+    }
+    
+    .login .form .form-control {
       background: transparent;
       border: none;
       border-bottom: 1px solid #dfe7f1;
@@ -44,14 +59,15 @@
       height: 40px;
       width: 400px;
       font-size: 15px;
-}
-.select{
-      margin-top: 10px;
-      width: 80px;
-      height: 30px;
-}
-.login .form .btn{
-      background: rgba(253, 85, 13, 0.875);
+      transition: border-bottom-color 0.3s; /* Add transition */
+    }
+    
+    .login .form .form-control:focus {
+      border-bottom-color: #3c15ed; /* Change border color on focus */
+    }
+    
+    .login .form .btn {
+      background: rgba(15, 45, 240, 0.875);
       border: none;
       border-radius: 4px;
       padding: 11px;
@@ -64,21 +80,29 @@
       margin-left: 40px;
       margin-bottom: 40px;
       font-size: 15px;
-}
-.login .form .btn:active{
+      transition: background-color 0.3s; /* Add transition */
+    }
+    
+    .login .form .btn:hover {
+      background-color: rgba(253, 85, 13, 1); /* Darken background color on hover */
+    }
+    
+    .login .form .btn:active {
       transform: translateY(1px);
-}
-.login .form .already{
+    }
+    
+    .login .form .already {
       display: block;
       text-align: center;
       font-size: 18px;
       color: #6f7a85;
       opacity: 0.9;
       text-decoration: none;
-}
-@media(max-width:500px){
-      .register .form .form-control{
-            width: 350px;
-            
+    }
+    
+    @media (max-width: 500px) {
+      .login .form .form-control {
+        width: 350px;
       }
-}
+    }
+    

@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar"
+import HorizontalSpace from "./components/HorizontalSpace/HorizontalSpace"
 import { Routes,Route, BrowserRouter } from "react-router-dom"
 import Registration from "./components/Registration/Registration"
 import Login from "./components/Login/Login"
@@ -17,6 +18,7 @@ function App() {
       <ToastContainer/>
       <BrowserRouter>
       <Navbar/>
+      < HorizontalSpace />
       <Routes>
          <Route path="/" element={<Home/>}/>
          <Route path="/register" element={<Registration/>} />

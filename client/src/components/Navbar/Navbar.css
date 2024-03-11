@@ -1,64 +1,163 @@
-.navbar{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 16px;
-      box-shadow: 0 1px 3px -2px black;
-}
-.navbar-brand h2{
-      color: black;
-      font-size: 38px;
-      font-weight: 600;
-}
-.navbar-links{
-      display: flex;
-      align-items: center;
-      list-style: none;
-      gap: 50px;
-      color: #626262;
-      font-size: 20px;
-      font-weight: 500;
-}
-.navbar-links button{
-      cursor: pointer;
-      background-color: rgba(0, 157, 255, 0.904);
-      border: 1px solid white;
-      border-radius: 6px;
-      height: 32px;
-      border: none;
-}
-.navbar-toggle{
-      cursor: pointer;
-      background: none;
-      border: none;
-      display: none;
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #014374;
+  padding: 10px 20px;
+  z-index: 1000;
 }
 
-@media(max-width:800px){
-      .navbar-links{
-            position: absolute;
-            right: 50px;
-      }
-      .navbar-brand h2{
-            margin-right: 230px;
-      }
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
 }
-@media(max-width:500px){
-      .navbar-brand h2{
-            font-size: 20px;
-            font-weight: 600;
-            margin-left: 40px;
-      }
-      .navbar-links{
-            gap: 30px;
-            font-size: 15px;
-            font-weight: 500;
-            margin-right: 10px;
-      }
-      .navbar-links button{
-            height: 25px;
-            width: 50px;
-            font-size: 8px;
-            
-      }
+
+.white-text {
+  color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #eeeef1;
+}
+
+.icon {
+  font-size: 24px;
+  transition: color 0.3s;
+  color: #ababab;
+}
+
+.icon:hover {
+  color: #eeeef1;
+}
+
+.vertical-line {
+  margin: 0 5px;
+}
+
+.search-textarea {
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Add margin-right to create space between search and register button */
+}
+
+.form-outline {
+  position: relative;
+  width: 200px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.form-control:focus ~ .form-label,
+.form-control:not(:placeholder-shown) ~ .form-label {
+  transform: translate(0, -100%);
+  font-size: 0.75rem;
+  padding: 0 0.375rem;
+  color: #007bff;
+}
+
+/* Navbar.css */
+/* Navbar.css */
+/* Navbar.css */
+.register-button {
+  position: absolute; /* Set position to absolute */
+  right: 50px; /* Adjust the distance from the right side */
+  background-color: #28a745; /* Green color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  ; /* Adjust padding */
+  border-radius: 5px; /* Add border radius */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Convert text to uppercase */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+.register-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.75rem; /* Adjust padding */
+  border: none; /* Remove border */
+  background-color: transparent; /* Set background color to transparent */
+  cursor: pointer;
+  outline: none;
+}
+
+.login-register-buttons {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  margin-right: 20px; /* Add margin between login and register buttons */
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #014374; /* Darker color on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+button:focus {
+  outline: none;
 }

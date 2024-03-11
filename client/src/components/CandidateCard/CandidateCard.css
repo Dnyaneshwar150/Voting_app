@@ -1,24 +1,45 @@
-
-.candidate-details{
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-      gap: 50px;
+.candidate-card {
+      margin-bottom: 20px; /* Adjust as needed */
+    }
+    
+    .candidate-details {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      width: 700px;
-      padding: 20px 0;
-      color: #454545;
-      font-size: 15px;
-      font-weight: 600;
-}
-button{
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #deeb4e85; /* Adjust background color as needed */
+      border-radius: 8px; /* Adjust border radius as needed */
+    }
+    .candidate-details h3 {
+      margin-left: 5px; /* Add margin-bottom to create space between h3 and p */
+    }
+    
+    .candidate-details p {
+      margin-left: 10px;
+      margin-right: 5px; /* Add margin-top to create space between p and button */
+    }
+    .vote-button {
       background-color: #007bff;
       color: #fff;
       padding: 5px 10px;
       border: none;
       cursor: pointer;
-      transition: 0.3s;
-}
-button:hover{
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+      transition: box-shadow 0.3s;
+    }
+    
+    .vote-button:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .bulb {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: red; /* Initial color */
+      transition: background-color 0.3s;
+    }
+    
+    .bulb.active {
+      background-color: green; /* Color when hovering over the vote button */
+    }
+    

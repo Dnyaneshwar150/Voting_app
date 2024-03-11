@@ -1,67 +1,66 @@
-import React from 'react'
-import './Home.css'
-import { Link } from 'react-router-dom'
-import card1 from '../../assets/register.jpg'
-import card2 from '../../assets/candidate.jpg'
-import card3 from '../../assets/secure.jpg'
-import card4 from '../../assets/Fl8tV6wDcJHRyPz1709025126.jpg'
+// Home.js
+import React, { useState } from 'react';
+import './Home.css';
+import { Link } from 'react-router-dom';
+import Image1 from '../../assets/Home_image_1.jpg';
+import Image2 from '../../assets/Home_image_2.jpg';
+import Image3 from '../../assets/Home_image_3.jpg';
+import Card from '../Cards/Card';
+import { NavLink } from 'react-router-dom';
+
+import HorizontalSpace from '../HorizontalSpace/HorizontalSpace';
+
+function Home() {
+   const [currentSlide, setCurrentSlide] = useState(0);
+
+   const nextSlide = () => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+   };
+
+   const prevSlide = () => {
+      setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
+   };
+
+   return (
+      <div className='home'>
+         {/* <HorizontalSpace /> Include HorizontalSpace component */}
+         <div className='home-carousel'>
+            <div className={`carousel-slide ${currentSlide === 0 ? 'active' : ''}`}>
+               <img src={Image1} alt='Slide 1' />
+            </div>
+            <div className={`carousel-slide ${currentSlide === 1 ? 'active' : ''}`}>
+               <img src={Image2} alt='Slide 2' />
+            </div>
+            <div className={`carousel-slide ${currentSlide === 2 ? 'active' : ''}`}>
+               <img src={Image3} alt='Slide 3' />
+            </div>
+         </div>
+         <div className='carousel-buttons'>
+            <button className='nav-button' onClick={prevSlide}>Previous</button>
+            <button className='nav-button' onClick={nextSlide}>Next</button>
+         </div>
+
+         <div className='cards-container'>
+            <Card
+               title="Electors"
+               features={["Register Now to Vote", "Check Application Status", "Search Name in Voter List"]}
+               primary={true}
+            />
+            <Card
+               title="POLITICAL PARTY"
+               features={["New Party Registration", "Election Symbol Allotment", "Permission"]}   
+               
+               primary={true}
+            />
+         </div>
+
+         <NavLink to="/voter" className="vote-button">
+  <button className="vote-btn">Click here to vote</button>
+</NavLink>
 
 
-const Home = () => {
-  return (
-    <div className='home'>
-       <div className="home-background">
-            <div className='background-text'>
-               <h1>Welcome to the Voting App</h1>
-               <p>Make your voice heard!</p>
-            </div>
-       </div>
-       <div className="home-cards">
-            <h1>ECI OFFICIALS</h1>
-            <div className="card">
-                  <img src={card1} alt="" />
-                  <div className="card-text">
-                    <h1>Easy Registration</h1>
-                    <p>Register with a just few simple steps ans start voting.</p>
-                  </div>
-            </div>
-            <div className="card">
-                  <img src={card2} alt="" />
-                  <div className="card-text">
-                     <h1>Explore Candidates</h1>
-                     <p>Learn about the candidates and their proposals.</p>
-                  </div>
-            </div>
-            <div className="card">
-                  <img src={card3} alt="" />  
-                  <div className="card-text">
-                     <h1>Secure Voting</h1>
-                     <p>Your vote is important,it's secure and confidential.</p>
-                  </div>
-            </div>
-       </div>
-    </div>
-  )
+      </div>
+   );
 }
 
-export default Home
-
-// {/* <header>
-// <h1>Welcome to the Voting App</h1>
-// <p>Make your voice heard!</p>
-// </header>
-// <section className='features'>
-// <div className="feature">
-//       <h2>Easy Registration</h2>
-//       <p>Register with a just few simple steps ans start voting.</p>
-// </div>
-// <div className="feature">
-//       <h2>Explore Candidates</h2>
-//       <p>Learn about the candidates and their proposals.</p>
-// </div>
-// <div className="feature">
-//       <h2>Secure Voting</h2>
-//       <p>Your vote is important, ans we ensure it's secure and confidential.</p>
-// </div>
-// </section>
-// <Link to="/register" className='btn'>Get Started</Link> */}
+export default Home;

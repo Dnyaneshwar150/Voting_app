@@ -1,7 +1,9 @@
+
 .admin-dashboard{
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: 50px;
 }
 .admindashboard-left{
       display: flex;
@@ -58,6 +60,38 @@
 .listcandidate-candidates{
       overflow-y: auto;
 }
+
+.admindashboard-left button {
+      height: 50px;
+      width: 90px;
+      border: 1px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 95px;
+      transition: 0.3s;
+      font-size: 17px;
+      background-color: rgba(15, 45, 240, 0.875);
+      color: #fff; /* Add this line to specify the text color */
+    }
+    
+    .admindashboard-left button:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .deleteButton {
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .deleteButton:hover {
+      background-color: darkred;
+    }
+    
 
 @media(max-width:800px){
       .admin-dashboard{

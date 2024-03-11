@@ -1,7 +1,7 @@
 import react, { useEffect, useState } from 'react'
 import './VotingDashboard.css'
 import CandidateList from '../CandidateList/CandidateList'
-import Vote from '../../assets/vote2.webp'
+import Vote from '../../assets/voteimg.png'
 import { BASE_URL } from '../../service'
 import { toast } from 'react-toastify'
 
