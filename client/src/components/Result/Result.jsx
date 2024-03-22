@@ -6,7 +6,7 @@ const Result = () => {
   const [candidates, setCandidates] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch(`${BASE_URL}/api/v1/candidate/candidates`)
+    await fetch(`${BASE_URL}/api/v1/candidate/candidates/result`)
       .then((res) => res.json())
       .then((data) => setCandidates(data));
   };

@@ -9,6 +9,10 @@ const candidateSchema = new mongoose.Schema({
             type: String,
             required: true
       },
+      pincode:{
+       type:Number,
+        required:true,  
+      },
       age: {
             type: Number,
             required: true

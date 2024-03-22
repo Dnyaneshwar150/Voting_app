@@ -38,7 +38,7 @@ const Login = () => {
       }else{
         toast.success('Login successful')
         storeTokenInLS(responseData.token)
-        navigate('/voter')
+        navigate('/')
       }
     } else {
       toast.error('Login failed,Please check your credentials.')

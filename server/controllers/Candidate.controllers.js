@@ -127,10 +127,28 @@ const voteCount = async(req,res) => {
       }
 }
 
-const fetchCandidates = async(req,res) =>{
-      const candidates = await Candidate.find();
+const fetchCandidatesResult = async(req,res) =>{
+      
+      const candidates = await Candidate.find({});
 
       res.status(200).json(candidates)
 
 }
-export { addCandidate, updateCandidate, deleteCandidate, voteToCandidate, voteCount, fetchCandidates }
+
+const fetchCandidates = async (req, res) => {
+      try {
+        const pin = req.params.pincode; // Extract the PIN from the URL parameter
+        let candidates;
+    
+        if (pin) {
+          candidates = await Candidate.find({ pincode:pin });
+        } 
+        res.status(200).json(candidates);
+      } catch (error) {
+        console.error('Error fetching candidates:', error);
+        res.status(500).json({ error: 'Internal server error' });
+      }
+    };
+    
+    
+export {fetchCandidatesResult, addCandidate, updateCandidate, deleteCandidate, voteToCandidate, voteCount, fetchCandidates }
