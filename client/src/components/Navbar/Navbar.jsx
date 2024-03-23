@@ -4,10 +4,10 @@ import { FaHome, FaPhone, FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaBars
 import './Navbar.css'; // Import your CSS file
 import { useAuth } from '../../store/auth' // Assuming useAuth hook is implemented correctly
 
-
 function Navbar() {
 
-    const { isLoggedIn } = useAuth() // Assuming useAuth hook returns isLoggedIn state correctly
+
+    const { isLoggedIn } = useAuth() // Assuming useAuth Shook returns isLoggedIn state correctly
 
     return (
         <div className='navbar'>
@@ -55,6 +55,9 @@ function Navbar() {
                     </div>
                 )}
             </div>
+
+            <NavLink to="/profile" className="nav-link"><button>My Profile</button></NavLink>
+
 
         </div>
     );

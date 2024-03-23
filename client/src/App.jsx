@@ -12,6 +12,8 @@ import { Logout } from "./components/Logout"
 import Result from "./components/Result/Result"
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import UserProfile from "./components/UserProfile/UserProfile"
+import ChangePassword from "./components/ChangePassword/ChangePassword"
 function App() {
   return (
     <div>
@@ -22,12 +24,14 @@ function App() {
       <Routes>
          <Route path="/" element={<Home/>}/>
          <Route path="/register" element={<Registration/>} />
+         <Route path="/profile" element={<UserProfile/>} />
          <Route path="/login" element={<Login/>} />
          <Route path="/voter" element={<VotingDashboard/>}/>
          <Route path="/admin" element={<AdminDashboard/>}/>
          <Route path="/addcandidate" element={<AddCandidate/>}/>
          <Route path="/logout" element={<Logout/>}/>
          <Route path="/result" element={<Result/>}/>
+         <Route path="/changepassword" element={<ChangePassword/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

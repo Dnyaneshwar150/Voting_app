@@ -1,0 +1,114 @@
+/* UserProfile.css */
+
+/* Styles for profile-container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fa;
+  }
+  
+  /* Styles for profile-card */
+  .profile-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    padding: 24px;
+    position: relative; /* Add position relative to position the button */
+  }
+  
+  
+  /* Styles for profile-content */
+  .profile-content {
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for profile-header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Styles for profile-image */
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  /* Styles for profile-info */
+  .profile-info {
+    flex-grow: 1;
+  }
+  
+  /* Styles for profile-name */
+  .profile-name {
+    margin: 0;
+    color: #333;
+    font-size: 28px;
+  }
+  
+  /* Styles for profile-role */
+  .profile-role {
+    margin: 8px 0;
+    color: #555;
+    font-size: 18px;
+  }
+  
+  /* Styles for verified and not-verified icons */
+  .verified-icon,
+  .not-verified-icon {
+    font-size: 24px;
+    margin-left: auto;
+  }
+  
+  .verified-icon {
+    color: green;
+  }
+  
+  .not-verified-icon {
+    color: red;
+  }
+  
+  /* Styles for profile-details */
+  .profile-details p {
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .profile-details strong {
+    font-weight: bold;
+  }
+  
+  /* Styles for profile-buttons */
+  /* UserProfile.css */
+
+/* Styles for profile-buttons */
+.profile-buttons {
+    position: absolute;
+    bottom: 20px; /* Adjust bottom spacing as needed */
+    right: 20px; /* Adjust right spacing as needed */
+  }
+  
+  /* Styles for Change Password button */
+  .nav-link button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link button:hover {
+    background-color: #0056b3;
+  }
+  
+  .nav-link button:focus {
+    outline: none;
+  }

@@ -59,9 +59,13 @@ const profile = async(req,res) => {
 const updateUser = async(req,res) => {
       try {
             const userId = req.user
+            console.log(userId.id);
             const {currentPassword,newPassword} = req.body
+            console.log(currentPassword);
+            console.log(newPassword);
 
-            const user = await User.findById(userId)
+            const user = await User.findById(userId.id)
+            console.log(user);
 
             if(!user || !(await user.comparePassword(currentPassword))){
                   return res.status(401).json({success:false,msg: "Invalid username or password"})
@@ -70,7 +74,7 @@ const updateUser = async(req,res) => {
             //update the user password
             user.password = newPassword
             await user.save();
-
+ 
             res.status(200).json({success:true,msg: "Password Updated"})
       } catch (error) {
             res.status(500).json({success:false,msg: "Internal Server Error"})
