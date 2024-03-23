@@ -9,7 +9,62 @@
     padding: 0;
     overflow: hidden;
     position: fixed;
-    top: 60px;
+    top: 60px;.horizontal-space {
+        background-color: transparent;
+        border: 2px solid #C2048A;
+        height: 50px; /* Height same as the logo div */
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        z-index: 1000;
+        width: calc(100% - 40px); /* Make the width 100% of the viewport minus padding */
+    }
+    
+    .horizontal-space img {
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 10px;
+    }
+    
+    .horizontal-space .scrolling-text {
+        color: black;
+        white-space: nowrap;
+        position: absolute;
+        top: 0; /* Set top to 0 */
+        left: 100%;
+        animation: scrollText 10s linear infinite; /* Adjust animation duration as needed */
+        font-weight: bold;
+        text-align: center;
+        overflow: hidden;
+        width: auto; /* Set width to auto to allow the text to expand */
+        line-height: 50px; /* Match line height with container height */
+        margin: 0; /* Remove margins */
+    }
+    
+    @keyframes scrollText {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    
+    .description {
+        margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .horizontal-space {
+            display: none;
+        }
+    }
+    
     left: 20px;
     z-index: 1000;
     width: calc(100% - 40px); /* Make the width 100% of the viewport minus padding */

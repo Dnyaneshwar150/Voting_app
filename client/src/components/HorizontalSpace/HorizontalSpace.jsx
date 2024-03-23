@@ -19,7 +19,7 @@ const HorizontalSpace = () => {
         <div className="horizontal-space">
             <img src={logo} alt="Logo" />
             <div className="scrolling-text">
-                <div className="description">{description}</div>
+                <div className="description"> ======Demo user Adhaar Number :123456987321 password:654321====================== </div>
             </div>
         </div>
     );
